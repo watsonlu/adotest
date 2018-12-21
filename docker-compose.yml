@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  azure-servicebus-sender:
+    image: ${DOCKER_REGISTRY-}azureservicebussender
+    build:
+      context: .
+      dockerfile: azure-servicebus-sender/Dockerfile
