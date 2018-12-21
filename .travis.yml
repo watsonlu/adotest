@@ -1,7 +1,5 @@
-language: csharp
-
 services:
   - docker
 
 before_install:
-  - docker build -t azure-servicebus-sender azure-servicebus-sender/
+  - docker-compose  -f "azure-servicebus-sender\docker-compose.yml"
