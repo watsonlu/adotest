@@ -1,5 +1,10 @@
 services:
   - docker
 
-script:
-  - docker-compose up -d --build
+stages:
+  - build
+
+jobs:
+  include:
+    - stage: build
+      script: docker-compose up -d --build
