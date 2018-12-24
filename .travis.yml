@@ -1,2 +1,5 @@
-before_install:
+services:
+  - docker
+
+script:
   - docker-compose up -d --build
