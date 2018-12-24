@@ -7,4 +7,10 @@ stages:
 jobs:
   include:
     - stage: build
-      script: docker-compose up -d --build
+      script: bash docker_build
+
+deploy:
+  provider: script
+  script: script: bash docker_push
+  on:
+    branch: master
