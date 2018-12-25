@@ -8,9 +8,8 @@ jobs:
   include:
     - stage: build
       script: bash docker_build
-
-deploy:
-  provider: script
-  script: script: bash docker_push
-  on:
-    branch: master
+  deploy:
+    provider: script
+    script: script: bash docker_push
+    on:
+      branch: master
